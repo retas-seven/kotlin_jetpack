@@ -1,10 +1,9 @@
-package com.example.app.data.remote.species_auto_gen
+package com.example.app.data.remote.auto_gen.species
 
 
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class EggGroup(
-    val name: String?,
+data class EvolutionChain(
     val url: String?
 )

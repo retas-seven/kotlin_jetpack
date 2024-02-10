@@ -1,7 +1,6 @@
 package com.example.app.data.repository.impl
 
 import com.example.app.data.remote.Api
-import com.example.app.data.remote.species_auto_gen.SpeciesResultData
 import com.example.app.data.repository.SpeciesRepository
 import com.example.app.data.repository.dto.SpeciesResultDto
 import javax.inject.Inject

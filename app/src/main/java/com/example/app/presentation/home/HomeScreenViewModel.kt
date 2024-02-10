@@ -13,6 +13,9 @@ class HomeScreenViewModel @Inject constructor (
 ): ViewModel() {
     init {
         println(">>>HomeScreenViewModel init")
+    }
+
+    fun searchSpecies(idOrName: String) {
         viewModelScope.launch {
             val species = speciesUseCase.searchSpecies("1")
             println(">>>species: $species")

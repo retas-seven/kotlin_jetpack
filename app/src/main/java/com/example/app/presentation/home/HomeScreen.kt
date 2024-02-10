@@ -1,5 +1,7 @@
 package com.example.app.presentation.home
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -16,5 +18,13 @@ fun HomeScreen(
         println(">>>HomeScreen LaunchedEffect")
     }
 
-    Text(text = "Android Base App")
+    Column {
+        Button(
+            onClick = { viewModel.searchSpecies("25") }
+        ) {
+            Text(text = "Search Species")
+        }
+
+        Text(text = "Android Base App")
+    }
 }

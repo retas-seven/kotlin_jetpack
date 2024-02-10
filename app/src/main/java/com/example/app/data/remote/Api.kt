@@ -1,6 +1,6 @@
 package com.example.app.data.remote
 
-import com.example.app.data.remote.species_auto_gen.SpeciesResultData
+import com.example.app.data.remote.auto_gen.species.SpeciesResultData
 import retrofit2.http.GET
 import retrofit2.http.Path
 

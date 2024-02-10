@@ -1,4 +1,4 @@
-package com.example.app.data.remote.species_auto_gen
+package com.example.app.data.remote.auto_gen.species
 
 
 import com.squareup.moshi.JsonClass
