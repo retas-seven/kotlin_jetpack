@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class speciesResultDto(
+data class SpeciesResultData(
     @Json(name = "base_happiness")
     val baseHappiness: Int?,
     @Json(name = "capture_rate")

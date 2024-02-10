@@ -1,4 +1,7 @@
 package com.example.app.use_case
 
-class SpeciesUseCase {
+import com.example.app.data.repository.dto.SpeciesResultDto
+
+interface SpeciesUseCase {
+    suspend fun searchSpecies(idOrName: String): SpeciesResultDto
 }

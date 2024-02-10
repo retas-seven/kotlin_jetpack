@@ -2,6 +2,8 @@ package com.example.app.di
 
 import com.example.app.common.Constants.BASE_URL
 import com.example.app.data.remote.Api
+import com.example.app.data.repository.SpeciesRepository
+import com.example.app.data.repository.impl.SpeciesRepositoryImpl
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -17,8 +19,7 @@ import javax.inject.Singleton
  */
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
-
+object RepositoryModule {
     @Provides
     @Singleton
     fun provideApi(): Api {
@@ -31,5 +32,11 @@ object AppModule {
             )
             .build()
             .create(Api::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideSpeciesRepository(api: Api): SpeciesRepository {
+        return SpeciesRepositoryImpl(api)
     }
 }

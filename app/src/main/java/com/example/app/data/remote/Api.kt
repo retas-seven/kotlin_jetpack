@@ -1,6 +1,6 @@
 package com.example.app.data.remote
 
-import com.example.app.data.remote.species_auto_gen.speciesResultDto
+import com.example.app.data.remote.species_auto_gen.SpeciesResultData
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -9,5 +9,5 @@ import retrofit2.http.Path
  */
 interface Api {
     @GET("pokemon-species/{id}")
-    suspend fun species(@Path("id") photoId: String): speciesResultDto
+    suspend fun species(@Path("id") photoId: String): SpeciesResultData
 }
