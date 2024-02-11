@@ -14,6 +14,7 @@ fun HomeScreen(
     navController: NavController,
     viewModel: HomeScreenViewModel = hiltViewModel(),
 ) {
+    println(">>>HomeScreen start")
     LaunchedEffect(key1 = Unit) {
         println(">>>HomeScreen LaunchedEffect")
     }
@@ -24,7 +25,11 @@ fun HomeScreen(
         ) {
             Text(text = "Search Species")
         }
-
-        Text(text = "Android Base App")
+        Button(
+            onClick = { viewModel.searchSpeciesFlow("1") }
+        ) {
+            Text(text = "Search Species Flow")
+        }
+        Text(text = viewModel.getName())
     }
 }
